@@ -60,7 +60,11 @@ var clear_board = function() {
 var __main = function() {
     // 初始化 websocket 的方法
     var namespace = '/chat'
-    var url = 'ws://' + document.domain + ':' + location.port + namespace
+    var wsprotocol = 'ws://'
+    if (location.protocol === 'https:') {
+        wsprotocol = 'wss://'
+    }
+    var url = wsprotocol + document.domain + ':' + location.port + namespace
     socket = io.connect(url)
     // on 函数用来绑定事件, connect 是连接到后端 websocket 成功的时候发生的
     socket.on('connect', function() {

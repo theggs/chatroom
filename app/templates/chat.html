@@ -1,25 +1,29 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>chat</title>
         <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
     </head>
     <body>
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-
-            <div id='id-div-channels' class="rc-left">
-                <ul class="nav nav-tabs" id="nav-channels">
-                    <li role="presentation" class="active"><a class="rc-channel" href="#">大厅</a></li>
-                    <li role="presentation"><a class="rc-channel" href="#">讨论区</a></li>
-                    <li role="presentation"><a class="rc-channel" href="#">胡言乱语区</a></li>
-                </ul>
-                <h1 id = 'id-div-channels-title'></h1>
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" id="id_chat_area" rows="16" disabled></textarea>
-                <input class="form-control" id="text" size="80" placeholder="输入聊天消息，按回车发送"><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div id='id-div-channels' class="rc-left">
+                    <ul class="nav nav-tabs" id="nav-channels">
+                        <li role="presentation" class="active"><a class="rc-channel" href="#">大厅</a></li>
+                        <li role="presentation"><a class="rc-channel" href="#">讨论区</a></li>
+                        <li role="presentation"><a class="rc-channel" href="#">胡言乱语区</a></li>
+                    </ul>
+                    <h1 id = 'id-div-channels-title'></h1>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="id_chat_area" rows="16" disabled></textarea>
+                    <input class="form-control" id="text" placeholder="输入聊天消息，按回车发送"><br><br>
+                </div>
             </div>
         </div>
     </div>

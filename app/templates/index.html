@@ -2,12 +2,20 @@
     <head>
         <meta charset="utf-8">
         <title>chat</title>
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
     </head>
     <body>
-        <h1>chat</h1>
-        <form action="{{ url_for('.enter') }}" method="POST">
-            <input type=text name="name" placeholder="昵称">
-            <button>进入聊天室</button>
-        </form>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <form class="input-group" action="{{ url_for('.enter') }}" method="POST">
+                <input type=text name="name" placeholder="昵称" class="form-control" minlength="2">
+                <span class="input-group-btn">
+                    <input class="btn btn-default" type="submit" value="进入聊天室">
+                </span>
+            </form>
+        </div>
+    </div>
+
     </body>
 </html>

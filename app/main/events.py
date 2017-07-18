@@ -21,6 +21,8 @@ socketio 是对 websocket 的封装
 
 emit 发送数据可以让相同的 room 里面的连接收到信息
 """
+
+
 @socketio.on('joined', namespace='/chat')
 def joined(message):
     room = message['msg']

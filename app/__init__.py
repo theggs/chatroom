@@ -11,7 +11,7 @@ def create_app(debug=False):
     app.config['SECRET_KEY'] = 'gua'
 
     from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint)
+    app.register_blueprint(main_blueprint, url_prefix='/toys/chatroom')
 
     socketio.init_app(app)
 
